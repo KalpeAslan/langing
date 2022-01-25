@@ -1,5 +1,7 @@
 .benefits-section {
   position: relative;
+  height: 100%;
+  min-height: 100vh;
 
 
   .bg-mountains-right {
@@ -54,39 +56,46 @@
   //  background: url("@img/mountains.svg") no-repeat;
   //}
 
-  .sun {
-    display: inline-block;
-    max-width: 535px;
-    position: absolute;
-    z-index: -1;
-    left: -120px;
-    max-height: 539px;
-    @include size(100%);
-    background: url("@img/sun.svg") no-repeat;
-  }
-
   .mobile {
-    border: 1px solid #D1F7FF;
-    box-sizing: border-box;
-    filter: drop-shadow(0px 0px 20px #C1F7FF);
-    border-radius: 24px;
-    background: url("@img/mobile.png") no-repeat center;
-    background-size: 100%;
-    max-width: 310px;
-    max-height: 610px;
-    width: 100%;
-    height: 100%;
+    position: relative;
+    &:before {
+      content: "";
+      display: inline-block;
+      border: 1px solid #D1F7FF;
+      box-sizing: border-box;
+      filter: drop-shadow(0px 0px 20px #C1F7FF);
+      border-radius: 24px;
+      background: url("@img/mobile.png") no-repeat center;
+      position: relative;
+      z-index: 0;
+      @include size(298px, 560px);
+      background-size: 100%;
+    }
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      z-index: -1;
+      left: -120px;
+      @include size(539px);
+      background: url("@img/sun.svg") no-repeat;
+    }
   }
 
   .benefits {
 
-    @include media-breakpoints-down($md){
-      margin-left: 110px;
-    }
 
     .title {
       font-family: "Audiowide", sans-serif;
       font-size: 48px;
+    }
+    @include media-breakpoints-down($md) {
+      .title {
+        font-size: 24px;
+      }
+      li {
+        font-size: 16px;
+      }
     }
 
     .benefits-list {

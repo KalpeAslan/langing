@@ -13,6 +13,7 @@
     right: -120px;
     z-index: -2;
     background: url("@img/mountains.svg") no-repeat;
+
     &::before {
       @include mountains_bg(180deg);
       @include size(100%, 10%);
@@ -36,6 +37,15 @@
 
     &.title {
       @include text-gradient(linear-gradient(180deg, #FE3218 0%, #FF911A 100%))
+    }
+  }
+
+  @include media-breakpoints-down($sm) {
+    .title, .subtitle {
+      font-size: 24px;
+    }
+    .title-letter-gradient {
+      font-size: 32px;
     }
   }
 

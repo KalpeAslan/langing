@@ -2,21 +2,35 @@
   padding: 48px;
   width: 100%;
   max-width: 100%;
+
   .titles {
     .subtitle {
       font-weight: 600;
       font-size: 16px;
       line-height: 150%;
     }
+
     .title {
       font-size: 48px;
       line-height: 120%;
       font-family: "Audiowide", sans-serif;
     }
+
     .faq {
       color: $phoenix;
       font-size: 18px;
       line-height: 150%;
+    }
+  }
+
+
+  @include media-breakpoints-down($md) {
+    .title {
+      font-size: 24px !important;
+    }
+
+    .faq {
+      margin-bottom: 40px;
     }
   }
 
@@ -29,10 +43,18 @@
       border: 1px solid #BFB6B6;
       box-sizing: border-box;
       border-radius: 8px;
+
       &:focus {
         border: 0.5px solid $phoenix;
         box-shadow: 0 0 0 0.5px $phoenix;
       }
+    }
+
+    input[type=checkbox] {
+      background: linear-gradient(154.49deg, rgba(117, 127, 131, 0.2) 5.35%, rgba(53, 79, 103, 0.2) 83.85%), rgba(12, 30, 44, 0.4);
+      border: 1px solid #E7E7E7;
+      box-sizing: border-box;
+      border-radius: 8px;
     }
   }
 }
