@@ -11,12 +11,8 @@ body {
   width: 100%;
   background: $bg !important;
   margin: 0;
-  padding: 0 120px;
   font-family: "IBM Plex Sans", sans-serif;
 
-  @include media-breakpoints-down($md) {
-    padding: 0 16px;
-  }
 
   .text-primary {
     color: $text-primary !important
