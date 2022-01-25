@@ -42,6 +42,15 @@
     }
   }
 
+  @include media-breakpoints-down($sm) {
+    .title, .subtitle {
+      font-size: 24px;
+    }
+    .title-letter-gradient {
+      font-size: 32px;
+    }
+  }
+
   .button-buy {
     width: 236px;
     height: 84px;

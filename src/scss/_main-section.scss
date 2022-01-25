@@ -1,15 +1,25 @@
 .main-section {
+
+
   .title {
     font-family: "Audiowide", sans-serif;
-    font-size: 64px;
     max-width: 657px;
     text-align: left;
+    font-size: 64px !important;
+    @include media-breakpoints-down($md) {
+      text-align: center;
+      font-size: 32px !important;
+    }
   }
 
   .logo {
-    display: inline-block;
-    @include size(157px, 77px);
-    background: url("@img/logo_text.svg") no-repeat;
+    margin-top: 80px;
+    font-size: 64px !important;
+    @include media-breakpoints-down($md) {
+      font-size: 32px !important;
+    }
+    @include text-gradient($letter-gradient);
+    font-family: "Audiowide", sans-serif;
   }
 
   .gradientLine {

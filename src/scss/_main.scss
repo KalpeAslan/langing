@@ -1,5 +1,11 @@
 main {
   height: 100%;
+  padding: 0 120px;
+
+  @include media-breakpoints-down($md) {
+    padding: 0 16px;
+  }
+
   @import "main-section";
 
   @import "video-section";

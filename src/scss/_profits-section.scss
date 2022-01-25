@@ -3,8 +3,17 @@
   padding-top: 80px;
   .profit {
 
-    @include media-breakpoints-up($xl){
+    @include media-breakpoints-up($xl) {
       margin-right: 130px;
+    }
+    @include media-breakpoints-down($md) {
+
+     .title {
+       font-size: 20px;
+     }
+      .description {
+        font-size: 16px;
+      }
     }
 
     .profit_icon {

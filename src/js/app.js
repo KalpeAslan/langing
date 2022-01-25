@@ -62,12 +62,11 @@ const animationFunc = ({ parentBlock, block, animationName }) => {
 
 // // ON SCROLL POSTIONS
 let currentY = 0;
-const screenSize = screen.height / 2;
+const screenSize = window.innerHeight / 2;
 
 const heightFunc = (section, line) => {
   const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.scrollHeight;
-//   setTimeout(())
-  line.style.height = `${procent > 100 ? 100 : procent < 0.35 ? 0 : procent}%`;
+  line.style.height = `${procent > 100 ? 100 : procent < 0 ? 0 : procent}%`;
 
 };
 
@@ -79,7 +78,7 @@ const halfWidthFunc = (section, line) => {
 
 const widthFunc = (section, line) => {
   const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.scrollHeight;
-  line.style.width = `${procent > 5 ? 100 : 0}%`;
+  line.style.width = `${procent > 0 ? 100 : 0}%`;
   line.style.transition = "1s";
 };
 
