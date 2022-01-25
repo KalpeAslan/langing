@@ -1,5 +1,7 @@
 .benefits-section {
   position: relative;
+  padding-top: 140px;
+  padding-bottom: 180px;
 
 
   .bg-mountains-right {
@@ -8,11 +10,12 @@
     right: -120px;
     z-index: -2;
     background: url("@img/mountains.svg") no-repeat;
-      -moz-transform: scaleX(-1);
-      -o-transform: scaleX(-1);
-      -webkit-transform: scaleX(-1);
-      transform: scaleX(-1);
-      -ms-filter: "FlipH";
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: "FlipH";
+
     &::before {
       @include mountains_bg(180deg);
       @include size(100%, 10%);
@@ -71,7 +74,7 @@
     filter: drop-shadow(0px 0px 20px #C1F7FF);
     border-radius: 24px;
     background: url("@img/mobile.png") no-repeat center;
-    background-size: 100%;
+    background-size: cover;
     max-width: 310px;
     max-height: 610px;
     width: 100%;
@@ -80,7 +83,7 @@
 
   .benefits {
 
-    @include media-breakpoints-down($md){
+    @include media-breakpoints-down($md) {
       margin-left: 110px;
     }
 
@@ -107,6 +110,15 @@
         }
       }
     }
+  }
+
+  .lineRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #6FE5FF;
   }
 
 }

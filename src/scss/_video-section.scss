@@ -1,6 +1,7 @@
 .video-section {
   color: white;
   position: relative;
+  padding-top: 80px;
   //@media screen and (max-width: 500px) {
   //  height: 1086px;
   //}
@@ -13,6 +14,7 @@
     right: -120px;
     z-index: -2;
     background: url("@img/mountains.svg") no-repeat;
+
     &::before {
       @include mountains_bg(180deg);
       @include size(100%, 10%);
@@ -27,7 +29,8 @@
   }
 
 
-  .title, .subtitle {
+  .title,
+  .subtitle {
     font-family: "Audiowide", sans-serif;
     font-size: 48px;
     line-height: 120%;
@@ -50,5 +53,23 @@
     text-align: center;
     font-size: 24px;
 
+  }
+
+  .lineTop {
+    position: absolute;
+    right: calc(50% - 4px);
+    top: 0;
+    width: 4px;
+    height: 4px;
+    background: #6FE5FF;
+  }
+
+  .lineLeft {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 0px;
+    background: #6FE5FF;
   }
 }

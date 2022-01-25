@@ -11,4 +11,15 @@
     @include size(157px, 77px);
     background: url("@img/logo_text.svg") no-repeat;
   }
+
+  .gradientLine {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    width: 4px;
+    height: 45vh;
+    background: linear-gradient(0deg, #6FE5FF 1.49%, rgba(193, 248, 255, 0) 100%);
+    box-shadow: 3px 0px 3px rgba(112, 229, 255, 0.1), 3px 0px -3px rgba(112, 229, 255, 0.1);
+  }
 }
