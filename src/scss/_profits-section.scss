@@ -1,0 +1,54 @@
+.profits-section {
+  .profit {
+
+    @include media-breakpoints-up($xl){
+      margin-right: 130px;
+    }
+
+    .profit_icon {
+      border-radius: 10px;
+      @include size(80px);
+      background: linear-gradient(154.49deg, rgba(117, 127, 131, 0.2) 5.35%, rgba(53, 79, 103, 0.2) 83.85%), rgba(12, 30, 44, 0.4);
+      box-shadow: 0px 0px 20px rgba(209, 247, 255, 0.4), inset 0px 8px 8px #D1F7FF, inset 0px 0px 64px rgba(209, 247, 255, 0.1);
+      backdrop-filter: blur(54px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .web3 {
+        @include profit_icon("@img/web3.svg")
+      }
+
+      .yield {
+        @include profit_icon("@img/yield.svg")
+      }
+
+      .liquid {
+        @include profit_icon("@img/liquid.svg")
+      }
+
+      .staking {
+        @include profit_icon("@img/staking.svg")
+      }
+
+      .exchange {
+        @include profit_icon("@img/exchange.svg")
+      }
+
+      .invest {
+        @include profit_icon("@img/invest.svg")
+      }
+    }
+
+    .title {
+      font-family: Audiowide, sans-serif;
+      font-size: 32px;
+
+    }
+
+    .description {
+      font-size: 20px;
+      max-width: 432px;
+    }
+  }
+}

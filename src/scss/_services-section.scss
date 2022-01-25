@@ -1,0 +1,54 @@
+.services-section {
+  position: relative;
+  height: 100vh;
+  .bg-mountains-left {
+    position: absolute;
+    @include size(100%);
+    left: -120px;
+    z-index: -2;
+    background: url("@img/mountains.svg") no-repeat;
+    &::before {
+      @include mountains_bg(180deg);
+      @include size(100%, 10%);
+      bottom: 0;
+    }
+
+    &::after {
+      @include mountains_bg(90deg);
+      @include size(60%, 100%);
+      right: -120px;
+    }
+  }
+  .title {
+    font-family: "Audiowide", sans-serif;
+    font-size: 48px;
+  }
+
+  .services-list {
+
+    @include media-breakpoints-down($sm) {
+      overflow-x: scroll;
+    }
+    .service {
+      .service-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px;
+        @include size(128px);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 24px;
+      }
+
+      .name {
+        margin-top: 8px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        color: $text-secondary;
+      }
+
+    }
+  }
+}

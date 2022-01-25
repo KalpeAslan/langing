@@ -1,0 +1,15 @@
+main {
+  height: 100%;
+  @import "main-section";
+
+  @import "video-section";
+
+  @import "profits-section";
+
+  @import "benefits-section";
+
+  @import "roadmap-section";
+
+  @import "services-section";
+
+}

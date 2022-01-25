@@ -1,0 +1,112 @@
+.benefits-section {
+  position: relative;
+
+
+  .bg-mountains-right {
+    position: absolute;
+    @include size(100%);
+    right: -120px;
+    z-index: -2;
+    background: url("@img/mountains.svg") no-repeat;
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      -ms-filter: "FlipH";
+    &::before {
+      @include mountains_bg(180deg);
+      @include size(100%, 10%);
+      bottom: 0;
+    }
+
+    &::after {
+      @include mountains_bg(90deg);
+      @include size(60%, 100%);
+      right: -120px;
+    }
+  }
+
+
+
+  //&::before {
+  //  content: "";
+  //  position: absolute;
+  //  z-index: -1;
+  //  @include size(60%, 100%);
+  //  bottom: 0;
+  //  background: rgb(255, 255, 255);
+  //  background: linear-gradient(240deg, rgba(255, 255, 255, 0) 0%, rgba(19, 35, 57, 1) 58%);
+  //  left: -120px;
+  //}
+  //
+  //&::after {
+  //  content: "";
+  //  position: absolute;
+  //  @include size(100%);
+  //  right: -120px;
+  //  bottom: 0;
+  //  z-index: -2;
+  //  -moz-transform: scaleX(-1);
+  //  -o-transform: scaleX(-1);
+  //  -webkit-transform: scaleX(-1);
+  //  transform: scaleX(-1);
+  //  -ms-filter: "FlipH";
+  //  background: url("@img/mountains.svg") no-repeat;
+  //}
+
+  .sun {
+    display: inline-block;
+    max-width: 535px;
+    position: absolute;
+    z-index: -1;
+    left: -120px;
+    max-height: 539px;
+    @include size(100%);
+    background: url("@img/sun.svg") no-repeat;
+  }
+
+  .mobile {
+    border: 1px solid #D1F7FF;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 0px 20px #C1F7FF);
+    border-radius: 24px;
+    background: url("@img/mobile.png") no-repeat center;
+    background-size: 100%;
+    max-width: 310px;
+    max-height: 610px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .benefits {
+
+    @include media-breakpoints-down($md){
+      margin-left: 110px;
+    }
+
+    .title {
+      font-family: "Audiowide", sans-serif;
+      font-size: 48px;
+    }
+
+    .benefits-list {
+      li {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        list-style-type: none;
+        color: $text-secondary;
+
+        &::before {
+          content: "";
+          background: url("@img/dot-item.svg") no-repeat center;
+          background-size: 50px;
+          margin-right: 16px;
+          @include size(16px);
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+}

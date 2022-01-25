@@ -1,0 +1,31 @@
+@mixin size($width, $height: $width)
+  width: $width
+  height: $height
+
+
+@mixin text-gradient($color)
+  background: $color
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+
+@mixin profit_icon($bg)
+  background: url($bg) no-repeat center
+  display: inline-block
+  @include size(40px)
+
+
+@mixin media-breakpoints-up($breakpoint)
+  @media screen and (min-width: $breakpoint)
+    @content
+
+@mixin media-breakpoints-down($breakpoint)
+  @media screen and (max-width: $breakpoint)
+    @content
+
+@mixin mountains_bg($deg)
+  content: ""
+  position: absolute
+  z-index: -1
+  background: rgb(255, 255, 255)
+  background: linear-gradient($deg, rgba(255, 255, 255, 0) 0%, rgba(19, 35, 57, 1) 58%)

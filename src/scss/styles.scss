@@ -1,0 +1,15 @@
+@import "mixins.sass";
+@import "variables.sass";
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../files/fonts/IBMPlexSans-Regular.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: "Audiowide";
+  src: url("../files/fonts/Audiowide-Regular.ttf") format("truetype");
+}
+
+@import "body";

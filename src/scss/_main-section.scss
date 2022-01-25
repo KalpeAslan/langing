@@ -1,0 +1,15 @@
+.main-section {
+  .title {
+    font-family: "Audiowide", sans-serif;
+    font-size: 64px;
+    max-width: 657px;
+    text-align: left;
+  }
+
+  .logo {
+    display: inline-block;
+    @include size(157px, 77px);
+    background: url("@img/logo_text.svg") no-repeat;
+    margin-right: 120px;
+  }
+}

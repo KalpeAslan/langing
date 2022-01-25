@@ -1,0 +1,119 @@
+@import "mixins.sass";
+@import "variables.sass";
+
+header {
+  margin-bottom: 100px;
+  padding: 0 120px;
+  color: $text-primary;
+  box-sizing: border-box;
+
+  .navbar {
+
+
+    @media screen and (min-width: 1300px) {
+      .navbar-expand-custom {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+      }
+      .navbar-expand-custom .navbar-nav {
+        flex-direction: row;
+      }
+      .navbar-expand-custom .dropdown-menu {
+        position: absolute;
+      }
+      .navbar-expand-custom .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+      }
+      .navbar-expand-custom > .container {
+        flex-wrap: nowrap;
+      }
+      .navbar-expand-custom .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+      }
+      .navbar-expand-custom .navbar-toggler {
+        display: none;
+      }
+    }
+
+
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    width: 100%;
+    top: 24px;
+    background: linear-gradient(154.49deg, rgba(117, 127, 131, 0.2) 5.35%, rgba(53, 79, 103, 0.2) 83.85%), rgba(12, 30, 44, 0.4) !important;
+    border-radius: 56px;
+    padding: 14px 36px 14px 40px;
+
+    .nav-item {
+      padding: 0 !important;
+      margin: 0 8px;
+
+      .nav-link {
+        color: $text-primary !important;
+
+        &.active {
+          @include text-gradient($letter-gradient)
+        }
+      }
+    }
+
+
+    .logo_container {
+      width: 200px;
+
+      .logo {
+        background: url("@img/logo.svg") center no-repeat;
+        background-size: 130px;
+        display: inline-block;
+        @include size(131px, 30px);
+      }
+    }
+
+    .buttons {
+      .button-download {
+        background-clip: padding-box;
+        border-style: solid;
+        border-width: 1px;
+        font-size: 12px;
+        position: relative;
+        border-color: #FE3218;
+        display: inline-block;
+        width: 171px;
+        height: 52px;
+        padding: 10px 20px;
+
+        .button-download_platform {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 16px;
+        }
+
+        &.button-download_logo__apple {
+          margin-right: 16px;
+
+          &::before {
+            content: "";
+            display: inline-block;
+            background: url("@img/apple.svg") no-repeat;
+            @include size(24px);
+          }
+        }
+
+        &.button-download_logo__google-play {
+
+          &::before {
+            content: "";
+            display: inline-block;
+            background: url("@img/google-play.svg") no-repeat;
+            @include size(24px);
+          }
+        }
+      }
+    }
+
+  }
+}

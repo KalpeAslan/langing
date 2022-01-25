@@ -1,0 +1,20 @@
+.feedback-section {
+  padding: 48px;
+  .titles {
+    .subtitle {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+    }
+    .title {
+      font-size: 48px;
+      line-height: 120%;
+      font-family: "Audiowide", sans-serif;
+    }
+    .faq {
+      color: $phoenix;
+      font-size: 18px;
+      line-height: 150%;
+    }
+  }
+}

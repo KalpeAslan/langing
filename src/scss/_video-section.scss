@@ -1,0 +1,54 @@
+.video-section {
+  color: white;
+  position: relative;
+  //@media screen and (max-width: 500px) {
+  //  height: 1086px;
+  //}
+
+
+  .bg-mountains-left {
+    position: absolute;
+    @include size(100%);
+    left: -120px;
+    right: -120px;
+    z-index: -2;
+    background: url("@img/mountains.svg") no-repeat;
+    &::before {
+      @include mountains_bg(180deg);
+      @include size(100%, 10%);
+      bottom: 0;
+    }
+
+    &::after {
+      @include mountains_bg(90deg);
+      @include size(60%, 100%);
+      right: -120px;
+    }
+  }
+
+
+  .title, .subtitle {
+    font-family: "Audiowide", sans-serif;
+    font-size: 48px;
+    line-height: 120%;
+    max-width: 732px;
+    text-align: center;
+
+    &.title {
+      @include text-gradient(linear-gradient(180deg, #FE3218 0%, #FF911A 100%))
+    }
+  }
+
+  .button-buy {
+    width: 236px;
+    height: 84px;
+    color: $phoenix;
+    border: 1px solid #FE3218;
+    font-family: Audiowide, sans-serif;
+    filter: drop-shadow(0px 0px 20px rgba(255, 153, 96, 0.6));
+    padding: 24px;
+    text-align: center;
+    font-size: 24px;
+
+  }
+}

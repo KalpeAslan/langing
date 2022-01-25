@@ -1,0 +1,38 @@
+
+body {
+
+
+  @import "header";
+  @import "main";
+  @import "footer";
+  //global css
+
+  height: 100%;
+  width: 100%;
+  background: $bg !important;
+  margin: 0;
+  padding: 0 120px;
+  font-family: "IBM Plex Sans", sans-serif;
+
+  .text-primary {
+    color: $text-primary !important
+  }
+
+  .text-secondary {
+    color: $text-secondary !important;
+  }
+
+  .button {
+    border-radius: 56px;
+  }
+
+  .title-letter-gradient {
+    font-family: "Audiowide", sans-serif;
+    font-size: 64px;
+    @include text-gradient($letter-gradient)
+  }
+
+  .section {
+    height: 100vh;
+  }
+}
