@@ -1,12 +1,12 @@
 <form class="row g-3 needs-validation" novalidate>
-    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
         @@include('../atoms/input.html', {
             "id": "validationCustom01",
             "placeholder": "First Name",
             "error": "Please enter your name."
         })
     </div>
-    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-xl-0 my-lg-0 my-md-3">
         @@include('../atoms/input.html', {
             "id": "validationCustom02",
             "placeholder": "email",
@@ -22,10 +22,10 @@
             </div>
         </div>
     </div>
-    <div class="col-12">
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 my-xl-0 my-lg-0 my-md-3">
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-            <label class="form-check-label" for="invalidCheck">
+            <label class="form-check-label text-primary" for="invalidCheck">
                 I agree with the privacy policy
             </label>
             <div class="invalid-feedback">
@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-    <div class="col-12">
-        <button class="btn btn-primary" type="submit">Submit form</button>
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <button class="btn btn-submit" type="submit">Submit form</button>
     </div>
 </form>
