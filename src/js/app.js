@@ -78,16 +78,28 @@ document.addEventListener("scroll", (e) => {
 // ON RESIZE ANIMATION
 const getRoadMapLeftItemLineWidth = (text, section, line) => {
   const textWidth = text.clientWidth;
-  const sectionHalfWidth = section.clientWidth / 2;
-  line.style.left = `${textWidth + 8}px`;
-  line.style.width = `${sectionHalfWidth - textWidth - 4}px`;
+  const sectionWidth = section.clientWidth;
+  if (sectionWidth < 1100) {
+    line.style.left = `${textWidth + 8}px`;
+    line.style.width = `calc(${sectionWidth - textWidth}px)`;
+  } else {
+    const sectionHalfWidth = section.clientWidth / 2;
+    line.style.left = `${textWidth + 8}px`;
+    line.style.width = `${sectionHalfWidth - textWidth - 4}px`;
+  }
 };
 
 const getRoadMapRightItemLineWidth = (text, section, line) => {
   const textWidth = text.clientWidth;
-  const sectionHalfWidth = section.clientWidth / 2;
-  line.style.right = `${textWidth + 8}px`;
-  line.style.width = `${sectionHalfWidth - textWidth - 10}px`;
+  const sectionWidth = section.clientWidth;
+  if (sectionWidth < 1100) {
+    line.style.left = `${textWidth + 8}px`;
+    line.style.width = `calc(${sectionWidth - textWidth}px)`;
+  } else {
+    const sectionHalfWidth = section.clientWidth / 2;
+    line.style.right = `${textWidth + 8}px`;
+    line.style.width = `${sectionHalfWidth - textWidth - 10}px`;
+  }
 };
 
 const lineWidthFunc = () => {
