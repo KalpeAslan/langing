@@ -23,27 +23,27 @@
 })();
 
 // ANIMATION
-const animationFunc = ({ parentBlock, block, animationName }) => {
-  const callback = (entries, block, animationName) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        block.classList.add(animationName);
-        return; // if we added the class, exit the function
-      }
+// const animationFunc = ({ parentBlock, block, animationName }) => {
+//   const callback = (entries, block, animationName) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         block.classList.add(animationName);
+//         return; // if we added the class, exit the function
+//       }
 
-      // We're not intersecting, so remove the class!
-      //   block.classList.remove(animationName);
-    });
-  };
+//       // We're not intersecting, so remove the class!
+//       //   block.classList.remove(animationName);
+//     });
+//   };
 
-  const observer = new IntersectionObserver((entries) => callback(entries, block, animationName), {
-    root: null,
-    rootMargin: "0%",
-    threshold: 0.4,
-  });
+//   const observer = new IntersectionObserver((entries) => callback(entries, block, animationName), {
+//     root: null,
+//     rootMargin: "0%",
+//     threshold: 0.4,
+//   });
 
-  observer.observe(parentBlock);
-};
+//   observer.observe(parentBlock);
+// };
 
 // animationFunc({
 //   parentBlock: document.querySelector(".videoLeftLine"),
@@ -60,39 +60,39 @@ const animationFunc = ({ parentBlock, block, animationName }) => {
 // const block = document.querySelector(".profits-section");
 // console.log("block", block);
 
-// // ON SCROLL POSTIONS
+// ON SCROLL ANIMATION
 let currentY = 0;
 const screenSize = window.innerHeight / 2;
 
-const heightFunc = (section, line, offsetTop) => {
-  const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.scrollHeight;
-  line.style.height = `${procent > 100 ? 100 : procent < 5 ? 0 : procent}%`;
+const heightFunc = (section, line) => {
+  const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.offsetHeight;
+  line.style.height = `${procent > 100 ? 100 : procent < 0 ? 0 : procent}%`;
 };
 
 const halfWidthFunc = (section, line) => {
-  const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.scrollHeight;
-  line.style.width = `${procent > 0 ? 50 : 0}%`;
+  const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.offsetHeight;
+  line.style.width = `${procent > -5 ? 50 : 0}%`;
   line.style.transition = ".5s";
 };
 
 const widthFunc = (section, line) => {
-  const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.scrollHeight;
+  const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.offsetHeight;
   line.style.width = `${procent > 0 ? 100 : 0}%`;
   line.style.transition = ".5s";
 };
 
 const offsetHalfWidthFunc = (section, line, offset) => {
-  const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.scrollHeight;
+  const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.offsetHeight;
   line.style.width = `${procent > 10 ? 50 : 0}%`;
   line.style.transition = ".5s";
 };
 
 const offsetHeightFunc = (section, line, offset) => {
-  const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.scrollHeight;
-  line.style.height = `calc(${procent > 100 ? 100 : procent < 0 ? 0 : procent}% - 150px)`;
+  const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.offsetHeight;
+  line.style.height = `calc(${procent > 100 ? 100 : procent < 0 ? 0 : procent}% - 120px)`;
 };
 
-document.addEventListener("scroll", (e) => {
+const linesOnScrollFunc = () => {
   currentY = document.documentElement.scrollTop || document.body.scrollTop;
   //   VIDEO BLOCK
   heightFunc(document.querySelector(".video-section"), document.querySelector("#videoLeftLine"));
@@ -105,4 +105,57 @@ document.addEventListener("scroll", (e) => {
   //   ROADMAP BLOCK
   offsetHalfWidthFunc(document.querySelector(".roadmap-section"), document.querySelector("#roadmapTopLine"), 120);
   offsetHeightFunc(document.querySelector(".roadmap-section"), document.querySelector("#roadmapCenterLine"));
+};
+
+linesOnScrollFunc();
+
+document.addEventListener("scroll", (e) => {
+  linesOnScrollFunc();
 });
+
+const getRoadMapLeftItemLineWidth = (text, section, line) => {
+  const textWidth = text.clientWidth;
+  const sectionHalfWidth = section.clientWidth / 2;
+  line.style.left = `${textWidth + 8}px`;
+  line.style.width = `${sectionHalfWidth - textWidth - 4}px`;
+};
+
+const getRoadMapRightItemLineWidth = (text, section, line) => {
+  const textWidth = text.clientWidth;
+  const sectionHalfWidth = section.clientWidth / 2;
+  line.style.right = `${textWidth + 8}px`;
+  line.style.width = `${sectionHalfWidth - textWidth - 10}px`;
+};
+
+const lineWidthFunc = () => {
+  getRoadMapLeftItemLineWidth(
+    document.querySelector("#quoterFirst"),
+    document.querySelector(".roadmap-section"),
+    document.querySelector("#quoterFirstLine")
+  );
+  getRoadMapRightItemLineWidth(
+    document.querySelector("#quoterSecond"),
+    document.querySelector(".roadmap-section"),
+    document.querySelector("#quoterSecondLine")
+  );
+  getRoadMapLeftItemLineWidth(
+    document.querySelector("#quoterThird"),
+    document.querySelector(".roadmap-section"),
+    document.querySelector("#quoterThirdLine")
+  );
+  getRoadMapRightItemLineWidth(
+    document.querySelector("#quoterFour"),
+    document.querySelector(".roadmap-section"),
+    document.querySelector("#quoterFourLine")
+  );
+};
+
+lineWidthFunc();
+
+window.addEventListener(
+  "resize",
+  (e) => {
+    lineWidthFunc();
+  },
+  true
+);

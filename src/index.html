@@ -1,12 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-@@include('components/templates/head.html',{})
-<body>
-    @@include('components/templates/header.html',{})
-    @@include('components/templates/main.html',{})
+  @@include('components/templates/head.html',{})
+  <body>
+    @@include('components/templates/header.html',{}) @@include('components/templates/main.html',{})
     @@include('components/templates/footer.html',{})
-<script src="js/app.min.js">
-
-</script>
-</body>
+    <script src="js/app.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
