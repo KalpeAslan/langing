@@ -22,44 +22,6 @@
   });
 })();
 
-// ANIMATION
-// const animationFunc = ({ parentBlock, block, animationName }) => {
-//   const callback = (entries, block, animationName) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) {
-//         block.classList.add(animationName);
-//         return; // if we added the class, exit the function
-//       }
-
-//       // We're not intersecting, so remove the class!
-//       //   block.classList.remove(animationName);
-//     });
-//   };
-
-//   const observer = new IntersectionObserver((entries) => callback(entries, block, animationName), {
-//     root: null,
-//     rootMargin: "0%",
-//     threshold: 0.4,
-//   });
-
-//   observer.observe(parentBlock);
-// };
-
-// animationFunc({
-//   parentBlock: document.querySelector(".videoLeftLine"),
-//   block: document.querySelector("#videoLeftLine"),
-//   animationName: "lineHeightAnimation",
-// });
-
-// animationFunc({
-//   parentBlock: document.querySelector(".videoTopLine"),
-//   block: document.querySelector("#videoTopLine"),
-//   animationName: "lineHalfWidthAnimation",
-// });
-
-// const block = document.querySelector(".profits-section");
-// console.log("block", block);
-
 // ON SCROLL ANIMATION
 let currentY = 0;
 const screenSize = window.innerHeight / 2;
@@ -113,6 +75,7 @@ document.addEventListener("scroll", (e) => {
   linesOnScrollFunc();
 });
 
+// ON RESIZE ANIMATION
 const getRoadMapLeftItemLineWidth = (text, section, line) => {
   const textWidth = text.clientWidth;
   const sectionHalfWidth = section.clientWidth / 2;
