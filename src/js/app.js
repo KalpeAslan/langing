@@ -134,3 +134,23 @@ window.addEventListener(
   },
   true
 );
+
+// VIDEO HANDLERS
+const vid = document.getElementById("myVideo");
+const enableBtn = document.getElementById("enableVideoAudio");
+const disableBtn = document.getElementById("disableVideoAudio");
+
+const enableMute = () => {
+  vid.muted = true;
+  enableBtn.style.display = "flex";
+  disableBtn.style.display = "none";
+};
+
+const disableMute = () => {
+  vid.muted = false;
+  disableBtn.style.display = "flex";
+  enableBtn.style.display = "none";
+};
+
+disableBtn.addEventListener("click", enableMute, false);
+enableBtn.addEventListener("click", disableMute, false);
