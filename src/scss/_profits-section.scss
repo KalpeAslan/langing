@@ -1,4 +1,6 @@
 .profits-section {
+  position: relative;
+  padding-top: 80px;
   .profit {
 
     @include media-breakpoints-up($xl) {
@@ -59,5 +61,29 @@
       font-size: 20px;
       max-width: 432px;
     }
+  }
+
+  .lineTop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background: #6FE5FF;
+    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.1), 0 0 1.5rem rgba(112, 229, 255, 0.1),
+    -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1),
+    0 -0.5rem 2rem rgba(112, 229, 255, 0.1), 0 0.5rem 3rem rgba(112, 229, 255, 0.1);
+  }
+
+  .lineRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #6FE5FF;
+    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.1), 0 0 1.5rem rgba(112, 229, 255, 0.1),
+    -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1),
+    0 -0.5rem 2rem rgba(112, 229, 255, 0.1), 0 0.5rem 3rem rgba(112, 229, 255, 0.1);
   }
 }

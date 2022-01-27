@@ -1,4 +1,3 @@
-
 body {
 
 
@@ -35,6 +34,7 @@ body {
   .section {
     height: 100vh;
   }
+
   .btn-submit {
     width: 118px;
     height: 56px;
@@ -43,5 +43,9 @@ body {
     border-radius: 12px;
     border: 1px solid $phoenix;
   }
+}
 
+main {
+  max-width: 100vw;
+  overflow: hidden;
 }
