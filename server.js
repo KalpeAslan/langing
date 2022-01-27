@@ -12,4 +12,5 @@ app.get('*', (req, res) => {
     res.sendfile(path.resolve(__dirname, 'dist', 'index.html'))
 })
 console.log('Dexoo running at PORT: ' + PORT)
+
 app.listen(PORT)
