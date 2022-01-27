@@ -5,6 +5,10 @@
   width: 100%;
   max-width: 100%;
 
+  @include media-breakpoints-down($md) {
+    padding: 16px;
+  }
+
   .titles {
     .subtitle {
       font-weight: 600;
