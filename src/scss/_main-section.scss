@@ -1,5 +1,7 @@
 .main-section {
-  position: relative;
+  @include media-breakpoints-down($md) {
+    position: relative;
+  }
 
   .mainAnimation {
     position: absolute;
