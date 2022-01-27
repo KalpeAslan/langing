@@ -1,3 +1,83 @@
 footer {
   @import "feedback-section";
+
+  .info {
+    padding: 16px 120px;
+    background: #102738;
+    max-width: 100% !important;
+
+    .social-media {
+      display: flex;
+      justify-content: end;
+    }
+
+    .rights-md {
+      display: none;
+    }
+
+    @include media-breakpoints-down($md) {
+      padding: 16px;
+      .row {
+        flex-direction: column-reverse !important;
+        .docs, .social-media, .rights {
+          align-items: center;
+          text-align: center;
+        }
+        .docs {
+          margin: 24px 0;
+        }
+        .social-media {
+          display: inline-block;
+        }
+        .rights-md {
+          display: inline-block;
+        }
+        .rights {
+          display: none;
+        }
+      }
+    }
+
+
+
+    .docs {
+      a {
+        border-bottom: 1px solid;
+        text-decoration: none;
+        &:hover {
+          color: $text-secondary !important;
+        }
+        &:nth-child(1) {
+          margin-right: 16px;
+        }
+      }
+    }
+    .social-media {
+      .twitter {
+        @include size(36px);
+        display: inline-block;
+        margin-right: 16px;
+        background: url("@img/twitter.svg");
+      }
+      .telegram {
+        @include size(36px);
+        margin-right: 16px;
+        display: inline-block;
+        background: url("@img/telegram.svg");
+      }
+      .medium {
+        @include size(36px);
+        display: inline-block;
+        margin-right: 16px;
+        background: url("@img/medium.svg");
+      }
+      .discord {
+        @include size(36px);
+        display: inline-block;
+        background: url("@img/discord.svg");
+      }
+    }
+  }
+
+
 }

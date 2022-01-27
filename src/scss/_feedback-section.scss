@@ -25,6 +25,7 @@
     .faq {
       color: $phoenix;
       font-size: 18px;
+      @include text-gradient($phoenix-bg);
       line-height: 150%;
     }
   }

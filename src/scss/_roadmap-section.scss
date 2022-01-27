@@ -27,12 +27,21 @@
 
   .subtitle {
     font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
   }
 
   .title {
     font-family: "Audiowide", sans-serif;
     font-size: 48px;
     line-height: 120%;
+  }
+
+  @include media-breakpoints-down($md) {
+    .subtitle
+    {
+      font-size: 20px !important;
+    }
   }
 
   .roadmap-item {
@@ -63,7 +72,6 @@
     .roadmap-content {
       padding: 24px;
       max-width: 544px;
-      max-height: 398px;
       @include size(100%);
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
       border: 1px solid #102738;
@@ -74,6 +82,9 @@
         font-family: "Audiowide", sans-serif;
         color: white;
         font-size: 32px;
+      }
+      li {
+        font-size: 20px;
       }
     }
   }
