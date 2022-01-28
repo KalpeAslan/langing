@@ -36,14 +36,16 @@
   .button-buy {
     width: 236px;
     height: 84px;
-    color: $phoenix;
-    border: 1px solid #FE3218;
+    // color: $phoenix; // comment out when link enabled !IMPORTANT
+    color: #cbcbcb !important; // comment when link enabled !IMPORTANT
+    // border: 1px solid #FE3218; // comment out when link enabled !IMPORTANT 
+    border: 1px solid #cbcbcb !important; // comment when link enabled !IMPORTANT
     font-family: Audiowide, sans-serif;
     filter: drop-shadow(0px 0px 20px rgba(255, 153, 96, 0.6));
     padding: 24px;
     text-align: center;
     font-size: 24px;
-    animation: pulse 1.5s infinite;
+    // animation: pulse 1.5s infinite; // comment out when link enabled !IMPORTANT
     box-shadow: 0 0 0 0 rgba(255, 153, 96, 0.6);
   }
 

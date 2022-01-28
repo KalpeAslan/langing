@@ -62,7 +62,8 @@ header {
         border-width: 1px;
         font-size: 12px;
         position: relative;
-        border-color: #FE3218;
+        // border-color: #FE3218; // comment out when link enabled !IMPORTANT 
+        border-color: #cbcbcb !important; // comment when link enabled !IMPORTANT
         display: inline-block;
         width: 171px;
         height: 52px;
