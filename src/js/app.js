@@ -43,19 +43,26 @@ const widthFunc = (section, line) => {
   line.style.transition = ".5s";
 };
 
-const offsetHalfWidthFunc = (section, line, offset) => {
+const roadMapHalfWidthFunc = (section, line) => {
   const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.offsetHeight;
   line.style.width = `${procent > 10 ? 50 : 0}%`;
   line.style.transition = ".5s";
 };
 
-const offsetHeightFunc = (section, line, offset) => {
+const roadMapHeightFunc = (section, line) => {
   const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.offsetHeight;
   line.style.height = `calc(${procent > 100 ? 100 : procent < 0 ? 0 : procent}% - 120px)`;
 };
 
+const buyHalfHeightFunc = (section, line) => {
+  const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.offsetHeight;
+  line.style.height = `calc(${procent > 100 ? 100 : procent < 0 ? 0 : procent}% * 1.45)`;
+};
+
 const linesOnScrollFunc = () => {
   currentY = document.documentElement.scrollTop || document.body.scrollTop;
+  //   BUY BLOCK
+  buyHalfHeightFunc(document.querySelector(".buy-section"), document.querySelector("#buyCenterLine"));
   //   VIDEO BLOCK
   heightFunc(document.querySelector(".video-section"), document.querySelector("#videoLeftLine"));
   halfWidthFunc(document.querySelector(".video-section"), document.querySelector("#videoTopLine"));
@@ -65,8 +72,8 @@ const linesOnScrollFunc = () => {
   //   BENEFITS BLOCK
   heightFunc(document.querySelector(".benefits-section"), document.querySelector("#benefitsRightLine"));
   //   ROADMAP BLOCK
-  offsetHalfWidthFunc(document.querySelector(".roadmap-section"), document.querySelector("#roadmapTopLine"), 120);
-  offsetHeightFunc(document.querySelector(".roadmap-section"), document.querySelector("#roadmapCenterLine"));
+  roadMapHalfWidthFunc(document.querySelector(".roadmap-section"), document.querySelector("#roadmapTopLine"));
+  roadMapHeightFunc(document.querySelector(".roadmap-section"), document.querySelector("#roadmapCenterLine"));
 };
 
 linesOnScrollFunc();
@@ -102,7 +109,7 @@ const getRoadMapRightItemLineWidth = (text, section, line) => {
   }
 };
 
-const lineWidthFunc = () => {
+const roadMapLineWidthFunc = () => {
   getRoadMapLeftItemLineWidth(
     document.querySelector("#quoterFirst"),
     document.querySelector(".roadmap-section"),
@@ -125,12 +132,12 @@ const lineWidthFunc = () => {
   );
 };
 
-lineWidthFunc();
+roadMapLineWidthFunc();
 
 window.addEventListener(
   "resize",
   (e) => {
-    lineWidthFunc();
+    roadMapLineWidthFunc();
   },
   true
 );

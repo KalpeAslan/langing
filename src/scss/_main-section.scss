@@ -52,6 +52,7 @@
   }
 
   .audioBtn {
+    z-index: 2;
     overflow: hidden;
     position: absolute;
     bottom: 20px;
@@ -68,6 +69,11 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    @include media-breakpoints-down($md) {
+      top: 120px;
+      right: 20px;
+    }
   }
 
   .audioBtnIcon {
