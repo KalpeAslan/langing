@@ -1,37 +1,16 @@
-.video-section {
+.buy-section {
+  margin-top: -200px;
   color: white;
   position: relative;
-  margin-top: -35vh;
-  //@media screen and (max-width: 500px) {
-  //  height: 1086px;
-  //}
+  padding-bottom: 35vh;
+  flex-direction: column !important;
 
+  @include media-breakpoints-down($sm) {
 
-  .bg-mountains-left {
-    position: absolute;
-    @include size(100%);
-    top: -35vh;
-    left: -120px;
-    right: -120px;
-    z-index: -2;
-    background: url("@img/mountains.svg") no-repeat;
-
-    &::before {
-      @include mountains_bg(180deg);
-      @include size(100%, 10%);
-      bottom: 0;
-    }
-
-    &::after {
-      @include mountains_bg(90deg);
-      @include size(60%, 100%);
-      right: -120px;
-    }
+    margin-top: -100px;
   }
 
-
-  .title,
-  .subtitle {
+  .title {
     font-family: "Audiowide", sans-serif;
     font-size: 48px;
     line-height: 120%;
@@ -45,8 +24,7 @@
 
   @include media-breakpoints-down($sm) {
 
-    .title,
-    .subtitle {
+    .title {
       font-size: 24px;
     }
 
@@ -58,14 +36,16 @@
   .button-buy {
     width: 236px;
     height: 84px;
-    color: $phoenix;
-    border: 1px solid #FE3218;
+    // color: $phoenix; // comment out when link enabled !IMPORTANT
+    color: #cbcbcb !important; // comment when link enabled !IMPORTANT
+    // border: 1px solid #FE3218; // comment out when link enabled !IMPORTANT 
+    border: 1px solid #cbcbcb !important; // comment when link enabled !IMPORTANT
     font-family: Audiowide, sans-serif;
     filter: drop-shadow(0px 0px 20px rgba(255, 153, 96, 0.6));
     padding: 24px;
     text-align: center;
     font-size: 24px;
-    animation: pulse 1.5s infinite;
+    // animation: pulse 1.5s infinite; // comment out when link enabled !IMPORTANT
     box-shadow: 0 0 0 0 rgba(255, 153, 96, 0.6);
   }
 
@@ -85,25 +65,11 @@
     }
   }
 
-  .lineTop {
-    position: absolute;
-    right: calc(50% - 2px);
-    top: 0;
+  .gradientLine {
+    margin: 20px auto 0px auto;
     width: 4px;
-    height: 4px;
-    background: #6FE5FF;
-    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.1), 0 0 1.5rem rgba(112, 229, 255, 0.1),
-      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1),
-      0 -0.5rem 2rem rgba(112, 229, 255, 0.1), 0 0.5rem 3rem rgba(112, 229, 255, 0.1);
-  }
-
-  .lineLeft {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 4px;
-    height: 0px;
-    background: #6FE5FF;
+    height: 35vh;
+    background: linear-gradient(0deg, #6FE5FF 1.49%, rgba(193, 248, 255, 0) 100%);
     box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.1), 0 0 1.5rem rgba(112, 229, 255, 0.1),
       -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1),
       0 -0.5rem 2rem rgba(112, 229, 255, 0.1), 0 0.5rem 3rem rgba(112, 229, 255, 0.1);
