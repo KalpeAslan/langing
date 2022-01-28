@@ -71,7 +71,7 @@
       background: url("@img/mobile.png") no-repeat center;
       position: relative;
       z-index: 0;
-      @include size(298px, 560px);
+      @include size(230px, 420px);
       background-size: 100%;
     }
     &::after {

@@ -28,6 +28,9 @@
       @include text-gradient($phoenix-bg);
       line-height: 150%;
     }
+     a {
+       border-bottom: 1px solid #FF911A;
+     }
   }
 
 

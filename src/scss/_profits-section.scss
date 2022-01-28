@@ -1,6 +1,8 @@
 .profits-section {
   position: relative;
   padding-top: 80px;
+  max-width: 100%;
+
   .profit {
 
     @include media-breakpoints-up($xl) {

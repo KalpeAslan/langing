@@ -37,8 +37,8 @@ header {
 
       .nav-link {
         color: $text-primary !important;
-        font-size: 20px;
-
+        font-size: 16px;
+        font-family: "Audiowide", sans-serif;
         &.active {
           @include text-gradient($letter-gradient)
         }
@@ -47,6 +47,10 @@ header {
 
 
     .logo_container {
+      margin-right: 45px;
+      @include media-breakpoints-down($md) {
+        margin-right: 0;
+      }
       .logo {
         background: url("@img/logo.svg") center no-repeat;
         background-size: 130px;

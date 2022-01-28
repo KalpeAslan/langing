@@ -54,27 +54,23 @@ footer {
     }
     .social-media {
       .twitter {
-        @include size(36px);
-        display: inline-block;
+        @include bg-img("@img/twitter.svg", 36px, 36px);
         margin-right: 16px;
-        background: url("@img/twitter.svg");
       }
       .telegram {
-        @include size(36px);
+        @include bg-img("@img/telegram.svg", 36px, 36px);
         margin-right: 16px;
-        display: inline-block;
-        background: url("@img/telegram.svg");
       }
       .medium {
-        @include size(36px);
-        display: inline-block;
+        @include bg-img("@img/medium.svg", 36px, 36px);
         margin-right: 16px;
-        background: url("@img/medium.svg");
       }
       .discord {
-        @include size(36px);
-        display: inline-block;
-        background: url("@img/discord.svg");
+        @include bg-img("@img/discord.svg", 36px, 36px);
+        margin-right: 16px;
+      }
+      .github {
+        @include bg-img("@img/github.svg", 36px, 36px);
       }
     }
   }
