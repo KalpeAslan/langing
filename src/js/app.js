@@ -144,20 +144,35 @@ window.addEventListener(
 
 // VIDEO HANDLERS
 const vid = document.getElementById("myVideo");
+const mobileVid = document.getElementById("myVideoMobile");
 const enableBtn = document.getElementById("enableVideoAudio");
 const disableBtn = document.getElementById("disableVideoAudio");
 
 const enableMute = () => {
   vid.muted = true;
+  mobileVid.muted = true;
   enableBtn.style.display = "flex";
   disableBtn.style.display = "none";
 };
 
 const disableMute = () => {
-  vid.muted = false;
+  const screenWidth = window.innerWidth;
+  if (screenWidth > 576) {
+    vid.muted = false;
+  } else {
+    mobileVid.muted = false;
+  }
   disableBtn.style.display = "flex";
   enableBtn.style.display = "none";
 };
+
+window.addEventListener(
+  "resize",
+  (e) => {
+    enableMute();
+  },
+  true
+);
 
 disableBtn.addEventListener("click", enableMute, false);
 enableBtn.addEventListener("click", disableMute, false);
