@@ -1,3 +1,6 @@
+import formValidate from './form.js'
+
+
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
   "use strict";
@@ -161,3 +164,4 @@ const disableMute = () => {
 
 disableBtn.addEventListener("click", enableMute, false);
 enableBtn.addEventListener("click", disableMute, false);
+formValidate();
