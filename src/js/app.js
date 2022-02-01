@@ -56,7 +56,7 @@ const roadMapHeightFunc = (section, line) => {
 
 const buyHalfHeightFunc = (section, line) => {
   const procent = ((currentY + screenSize - section.offsetTop) * 100) / section.offsetHeight;
-  line.style.height = `calc(${procent > 100 ? 100 : procent < 0 ? 0 : procent}% * 1.45)`;
+  line.style.height = `calc(${procent > 100 ? 100 : procent < 0 ? 0 : procent}% * 1.5)`;
 };
 
 const linesOnScrollFunc = () => {
