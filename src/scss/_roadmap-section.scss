@@ -85,11 +85,17 @@
     width: 50%;
     height: 4px;
     background: #6FE5FF;
-    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.1), 0 0 1.5rem rgba(112, 229, 255, 0.1),
-      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1),
-      0 -0.5rem 2rem rgba(112, 229, 255, 0.1), 0 0.5rem 3rem rgba(112, 229, 255, 0.1);
+    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
+    -webkit-box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
+    -moz-box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
 
-    @include media-breakpoints-down($xl) {
+    @include media-breakpoints-down(1357px) {
       display: none;
     }
   }
@@ -103,14 +109,21 @@
     height: 100%;
     background: #6FE5FF;
     max-height: calc(100% - 450px);
-    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.1), 0 0 1.5rem rgba(112, 229, 255, 0.1),
-      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1),
-      0 -0.5rem 2rem rgba(112, 229, 255, 0.1), 0 0.5rem 3rem rgba(112, 229, 255, 0.1);
+    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
+    -webkit-box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
+    -moz-box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
 
-    @include media-breakpoints-down($xl) {
+    @include media-breakpoints-down(1357px) {
       right: 0;
       left: unset;
     }
+
     @include media-breakpoints-down($sm) {
       right: 0;
       left: unset;
@@ -127,9 +140,15 @@
     width: 0px;
     height: 4px;
     background: #6FE5FF;
-    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.1), 0 0 1.5rem rgba(112, 229, 255, 0.1),
-      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1),
-      0 -0.5rem 2rem rgba(112, 229, 255, 0.1), 0 0.5rem 3rem rgba(112, 229, 255, 0.1);
+    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
+    -webkit-box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
+    -moz-box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
 
     @include media-breakpoints-down($xl) {
       left: unset;
@@ -145,9 +164,15 @@
     width: 0px;
     height: 4px;
     background: #6FE5FF;
-    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.1), 0 0 1.5rem rgba(112, 229, 255, 0.1),
-      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1),
-      0 -0.5rem 2rem rgba(112, 229, 255, 0.1), 0 0.5rem 3rem rgba(112, 229, 255, 0.1);
+    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
+    -webkit-box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
+    -moz-box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
 
     @include media-breakpoints-down($xl) {
       left: unset;
