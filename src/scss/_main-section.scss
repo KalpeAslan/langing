@@ -101,29 +101,4 @@
     background: #95D3E8;
     transform: skewX(-35deg);
   }
-
-  .gradientLine {
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    top: 65vh;
-    width: 4px;
-    height: 35vh;
-    background: linear-gradient(0deg, #6FE5FF 1.49%, rgba(193, 248, 255, 0) 100%);
-    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.1), 0 0 1.5rem rgba(112, 229, 255, 0.1),
-      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1),
-      0 -0.5rem 2rem rgba(112, 229, 255, 0.1), 0 0.5rem 3rem rgba(112, 229, 255, 0.1);
-    animation-duration: 2s;
-    animation-name: slidein;
-  }
-
-  @keyframes slidein {
-    from {
-      height: 0px;
-    }
-
-    to {
-      height: 35vh;
-    }
-  }
 }

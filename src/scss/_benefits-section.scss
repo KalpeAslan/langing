@@ -61,6 +61,7 @@
 
   .mobile {
     position: relative;
+
     &:before {
       content: "";
       display: inline-block;
@@ -74,6 +75,7 @@
       @include size(298px, 550px);
       background-size: 100%;
     }
+
     &::after {
       content: "";
       display: inline-block;
@@ -92,10 +94,12 @@
       font-family: "Audiowide", sans-serif;
       font-size: 48px;
     }
+
     @include media-breakpoints-down($md) {
       .title {
         font-size: 24px;
       }
+
       li {
         font-size: 16px;
       }
@@ -128,9 +132,15 @@
     width: 4px;
     height: 100%;
     background: #6FE5FF;
-    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.1), 0 0 1.5rem rgba(112, 229, 255, 0.1),
-    -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.1),
-    0 -0.5rem 2rem rgba(112, 229, 255, 0.1), 0 0.5rem 3rem rgba(112, 229, 255, 0.1);
+    box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
+    -webkit-box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
+    -moz-box-shadow: 0 0 0.6rem rgba(112, 229, 255, 0.4), 0 0 1.5rem rgba(112, 229, 255, 0.4),
+      -0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4), 0.2rem 0.1rem 1rem rgba(112, 229, 255, 0.4),
+      0 -0.5rem 2rem rgba(112, 229, 255, 0.4), 0 0.5rem 3rem rgba(112, 229, 255, 0.4);
   }
 
 }
