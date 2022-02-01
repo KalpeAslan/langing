@@ -10,27 +10,56 @@
   }
 
   .titles {
-    .subtitle {
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 150%;
+
+    @include media-breakpoints-up($lg) {
+      padding-top: 100px;
     }
 
-    .title {
-      font-size: 48px;
-      line-height: 120%;
-      font-family: "Audiowide", sans-serif;
+    .contact {
+      font-family: IBM Plex Sans, sans-serif;
+
+      @include media-breakpoints-up($lg) {
+        margin-bottom: 40px;
+      }
+
+      padding-left: 0;
+      margin-left: 0;
+
+
+      .title {
+        margin-top: 16px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+      }
+
+      .description {
+        max-width: 200px;
+        font-size: 20px;
+        line-height: 150%;
+      }
     }
 
-    .faq {
-      color: $phoenix;
-      font-size: 18px;
-      @include text-gradient($phoenix-bg);
-      line-height: 150%;
+    .faq_container {
+      @include media-breakpoints-down($lg) {
+        margin:  40px 0;
+      }
+      .faq {
+        color: $phoenix;
+        font-size: 18px;
+        @include text-gradient($phoenix-bg);
+        line-height: 150%;
+        @include media-breakpoints-down($lg) {
+          margin-bottom: 40px;
+        }
+      }
+
+      a {
+        border-bottom: 1px solid #FF911A;
+      }
     }
-     a {
-       border-bottom: 1px solid #FF911A;
-     }
+
   }
 
 
@@ -45,9 +74,22 @@
   }
 
   .form {
+    .subtitle {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+    }
+
+    .title {
+      font-size: 48px;
+      line-height: 120%;
+      font-family: "Audiowide", sans-serif;
+    }
+
     input[type=text] {
       min-width: 288px;
       width: 100%;
+      color: $text-primary;
       height: 62px;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
       border: 1px solid #BFB6B6;

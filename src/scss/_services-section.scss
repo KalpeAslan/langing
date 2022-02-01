@@ -1,7 +1,6 @@
 .services-section {
   position: relative;
-  height: 100vh;
-
+  padding: 150px 0;
   .bg-mountains-left {
     position: absolute;
     @include size(100%);
@@ -27,8 +26,27 @@
     font-size: 48px;
   }
 
-  .services-list {
 
+  .store {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 40px;
+    padding: 54px;
+    margin-bottom: 159px;
+    .store-list {
+      overflow-x: auto;
+      width: 100%;
+      & > * {
+        margin-right: 94px;
+      }
+      @include media-breakpoints-down($md) {
+        overflow-x: scroll;
+      }
+    }
+  }
+
+
+  .services-list {
+    overflow-x: auto;
     @include media-breakpoints-down($sm) {
       overflow-x: scroll;
     }
@@ -61,6 +79,7 @@
     }
     .service {
       margin: 0 16px !important;
+
       .service-icon {
         width: 96px !important;
         height: 96px !important;

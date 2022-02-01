@@ -1,6 +1,35 @@
 <section class="services-section ">
     <span class="bg-mountains-left"></span>
-    <div class="container d-flex flex-column align-items-center">
+
+
+    <div class="store d-flex flex-column align-items-center">
+        <div class="title text-primary mb-5 text-center">The future has plenty in store</div>
+        <div class="store-list d-flex justify-content-between">
+            @@include('../atoms/service_icon.html', {
+            "name": "Dexoo Pay",
+            "img": "@img/pay.svg"
+            })
+            @@include('../atoms/service_icon.html', {
+            "name": "Dexoo Finance",
+            "img": "@img/finance.svg"
+            })
+            @@include('../atoms/service_icon.html', {
+            "name": "Dexoo Index",
+            "img": "@img/index.svg"
+            })
+            @@include('../atoms/service_icon.html', {
+            "name": "Dexoo GamFi",
+            "img": "@img/gameFi.svg"
+            })
+            @@include('../atoms/service_icon.html', {
+            "name": "Dexoo NFT",
+            "img": "@img/nft.svg"
+            })
+        </div>
+    </div>
+
+
+    <div class="d-flex flex-column align-items-center">
         <div class="title text-primary mb-5">Services we use</div>
         <div style="width: 100%" class="services-list d-flex align-items-start justify-content-between">
             @@include('../atoms/service_icon.html', {
