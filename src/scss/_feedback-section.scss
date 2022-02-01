@@ -10,29 +10,22 @@
   }
 
   .titles {
-    .contact {
-      font-family: IBM Plex Sans, sans-serif;
+    .title {
+      margin-top: 16px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+    }
+    .description {
+      max-width: 200px;
+      font-size: 20px;
+      line-height: 150%;
+    }
 
+    .contact {
       @include media-breakpoints-up($lg) {
         margin-bottom: 40px;
-      }
-
-      padding-left: 0;
-      margin-left: 0;
-
-
-      .title {
-        margin-top: 16px;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 150%;
-      }
-
-      .description {
-        max-width: 200px;
-        font-size: 20px;
-        line-height: 150%;
       }
     }
 
